@@ -13,11 +13,12 @@
     data-sap-ui-preload="async"
     data-sap-ui-resourceroots='{
     "sap.ui.demo.wt": "./"
-}' >
+}' 
+    data-sap-ui-compatVersion="edge" >
 </script>
 <script>
    sap.ui.getCore().attachInit(function () {
-       
+
        sap.ui.xmlview({
          viewName : "sap.ui.demo.wt.view.App"
      }).placeAt("content");
