@@ -2,10 +2,13 @@
 	controllerName="sap.ui.demo.wt.controller.App"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-	<Text text="Hello there "/>
+	<Text text="Hello there1 "/>
 	<Button
       text="{i18n>showHelloButtonText}"
       press="onShowHello"/>
+    <Button
+      text="Say Bye"
+      press="onShowBye"/>
     <Input
       value="{/recipient/name}"
       description="Hello {/recipient/name}"
