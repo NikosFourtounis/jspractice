@@ -12,6 +12,15 @@
 
 	"applicationVersion": {
 	  "version": "1.0.0"
+	},
+	"dataSources": {
+	  "invoiceRemote": {
+		"uri": "http://services.odata.org/TripPinRESTierService/(S(ypnqauf1kyh3hopc2tfgck2d))/$metadata",
+		"type": "OData",
+		"settings": {
+		  "odataVersion": "2.0"
+		}
+	  }
 	}
   },
 
@@ -47,8 +56,7 @@
 		}
 	  },
 	  "invoice": {
-	    "type": "sap.ui.model.json.JSONModel",
-	    "uri":"Invoices.json"
+		"dataSource": "invoiceRemote"
 	  }
 	},
 	"resources": {
