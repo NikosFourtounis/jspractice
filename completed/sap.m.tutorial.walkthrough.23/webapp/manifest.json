@@ -1,29 +1,16 @@
 {
   "_version": "1.1.0",
-
   "sap.app": {
 	"_version": "1.1.0",
 	"id": "sap.ui.demo.wt",
 	"type": "application",
-
 	"i18n": "i18n/i18n.properties",
 	"title": "{{appTitle}}",
 	"description": "{{appDescription}}",
-
 	"applicationVersion": {
 	  "version": "1.0.0"
-	},
-	"dataSources": {
-	  "invoiceRemote": {
-		"uri": "http://services.odata.org/TripPinRESTierService/(S(ypnqauf1kyh3hopc2tfgck2d))/$metadata",
-		"type": "OData",
-		"settings": {
-		  "odataVersion": "2.0"
-		}
-	  }
 	}
   },
-
   "sap.ui": {
 	"_version": "1.1.0",
 	"technology": "UI5",
@@ -37,11 +24,9 @@
 		"sap_belize"
 	]
   },
-
   "sap.ui5": {
 	"_version": "1.1.0",
 	"rootView": "sap.ui.demo.wt.view.App",
-
 	"dependencies": {
 	  "minUI5Version": "1.30",
 	  "libs": {
@@ -56,7 +41,8 @@
 		}
 	  },
 	  "invoice": {
-		"dataSource": "invoiceRemote"
+	    "type": "sap.ui.model.json.JSONModel",
+	    "uri":"Invoices.json"
 	  }
 	},
 	"resources": {
